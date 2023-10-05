@@ -14,7 +14,13 @@ const data = [
 ];
 
 export default function Home() {
-  const [crop, setCrop] = useState<Crop>();
+  const [crop, setCrop] = useState<Crop | undefined>({
+    unit: "%",
+    width: 50,
+    height: 50,
+    x: 0,
+    y: 0,
+  });
   const [aspect, setAspect] = useState(data[0]["aspect"]);
 
   return (
